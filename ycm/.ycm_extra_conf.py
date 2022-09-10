@@ -88,7 +88,7 @@ def get_flags_for_file(filename):
     return flags.get(ext, [])
 
 
-def FlagsForFile(filename, *args, **kwargs):
+def Settings(filename, *args, **kwargs):
     """YCM calls this hook to get a list of compilation flags for a given file"""
 
     # this file MUST be in the root of a (e.g. git) project!
@@ -105,4 +105,4 @@ if __name__ == '__main__':
     if (len(sys.argv) != 2):
         print(f"USAGE: {sys.argv[0]} <filename>, where filename is a file to get compilation flags for.")
         sys.exit(1)
-    print(FlagsForFile(sys.argv[1]))
+    print(Settings(sys.argv[1]))
